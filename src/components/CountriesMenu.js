@@ -177,13 +177,9 @@ export default function CountriesMenu() {
     return (<>
         <Layout>
             <Header className="header">
-            <Switch checkedChildren="Card" unCheckedChildren="Table" onChange={onChangeSwitch} defaultChecked />
-
+                <Switch checkedChildren="Card" unCheckedChildren="Table" onChange={onChangeSwitch} defaultChecked />
                 {!switchChecked ? (
                     <section className="container mx-auto p-8">
-
-
-
                         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-8">
                             <h1>Table View</h1>
                             <Input.Search
@@ -217,13 +213,11 @@ export default function CountriesMenu() {
                                     onClick: event => {
                                         console.log("GET ROW RECORD", record);
                                         navigate(`/${record.name.common}`);
-                                    }, // click row
+                                    },
                                 };
                             }}
                         />
                     </section>
-
-
                 )
                     :
                     (
@@ -268,7 +262,8 @@ export default function CountriesMenu() {
                                 ))}
                             </div>
                         </section>
-                    )}                     </Header>
+                    )}
+            </Header>
         </Layout>
     </>
     );

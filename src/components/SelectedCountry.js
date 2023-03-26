@@ -18,7 +18,6 @@ export default function SelectedCountry() {
                 .then((response) => {
                     console.log("Response below");
                     console.log(response);
-
                     setCountry(response.data);
                     setCurrencies(
                         Object.values(response.data[0].currencies)
@@ -35,7 +34,6 @@ export default function SelectedCountry() {
                     console.log("This is the error: ", error)
                 })
         };
-
         getSingleCountry();
     }, [name]);
 
@@ -43,23 +41,22 @@ export default function SelectedCountry() {
         document.title = `Countries | ${name}`;
     }, [name]);
 
-
     return (
         <>
             <Layout>
                 <Header className="header">
+                    <Link
+                        to="/"
+                        className="inline-block mt-2 bg-white  px-6 rounded shadow text-gray-700 transition-all duration-200"
+                        style={{ lineHeight: "48px" }}
+                    >
+                        Back
+                    </Link>
                     <section className="p-8 md:py-0 max-w-7xl mx-auto">
-
-                        <Link
-                            to="/"
-                            className="inline-block mt-2 bg-white  px-6 rounded shadow text-gray-700 transition-all duration-200"
-                        >
-                            Back
-                        </Link>
                         {country.map((item) => (
                             <div
                                 key={item.population}
-                                className="grid grid-cols-1 gap-8 md:grid-cols-2 md:place-items-center md:h-screen"
+                                className="grid grid-cols-1 gap-8 md:grid-cols-2 md:place-items-center"
                             >
                                 <article>
                                     <img src={item.flags.svg} alt={item.name.common} />
@@ -71,15 +68,15 @@ export default function SelectedCountry() {
                                     </h1>
 
                                     <ul className="flex flex-col items-start justify-start text-slate-700">
-                                        <li style={{lineHeight: "35px"}}>Native Name: {item.capital[0]}</li>
-                                        <li style={{lineHeight: "35px"}}>Population: {item.population.toLocaleString()}</li>
-                                        <li style={{lineHeight: "35px"}}>Region: {item.region}</li>
-                                        <li style={{lineHeight: "35px"}}>Subregion: {item.subregion}</li>
-                                        <li style={{lineHeight: "35px"}}>Capital: {item.capital[0]}</li>
+                                        <li style={{ lineHeight: "35px" }}>Native Name: {item.capital[0]}</li>
+                                        <li style={{ lineHeight: "35px" }}>Population: {item.population.toLocaleString()}</li>
+                                        <li style={{ lineHeight: "35px" }}>Region: {item.region}</li>
+                                        <li style={{ lineHeight: "35px" }}>Subregion: {item.subregion}</li>
+                                        <li style={{ lineHeight: "35px" }}>Capital: {item.capital[0]}</li>
 
-                                        <li style={{lineHeight: "35px"}}>Top Level Domain: {item.tld}</li>
-                                        <li style={{lineHeight: "35px"}}>Currencies: {currencies}</li>
-                                        <li style={{lineHeight: "35px"}}>Languages:  {languages}</li>
+                                        <li style={{ lineHeight: "35px" }}>Top Level Domain: {item.tld}</li>
+                                        <li style={{ lineHeight: "35px" }}>Currencies: {currencies}</li>
+                                        <li style={{ lineHeight: "35px" }}>Languages:  {languages}</li>
                                     </ul>
 
                                     {item.borders && (

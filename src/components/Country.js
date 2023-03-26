@@ -13,7 +13,8 @@ export default function Country({ flags, name, population, region, capital }) {
                     <div className="p-4">
                         <h2 className="font-bold text-lg text-gray-900 mb-2">
                             {name.common}
-                        </h2>                <ul className="flex flex-col items-start justify-start gap-2">
+                        </h2>
+                        <ul className="flex flex-col items-start justify-start gap-2">
                             <li>Population: {population.toLocaleString()}</li>
                             <li>Region: {region}</li>
                             <li>Capital: {capital}</li>
