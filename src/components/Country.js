@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 
 export default function Country({ flags, name, population, region, capital }) {
+
     return (
         <>
             <Link to={`/${name.common}`}>
