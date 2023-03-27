@@ -59,8 +59,8 @@ export default function CountriesMenu() {
                     value: 'Europe',
                 },
                 {
-                    text: 'Ocenia',
-                    value: 'Ocenia',
+                    text: 'Oceania',
+                    value: 'Oceania',
                 },
             ],
             filteredValue: [searchRegion],
@@ -123,7 +123,7 @@ export default function CountriesMenu() {
     }, [switchChecked])
 
     const regions = [
-        { name: "Africa" }, { name: "Americas" }, { name: "Asia" }, { name: "Europe" }, { name: "Ocenia" }];
+        { name: "Africa" }, { name: "Americas" }, { name: "Asia" }, { name: "Europe" }, { name: "Oceania" }];
 
     async function filterByRegion(searchRegion) {
         try {
