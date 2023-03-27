@@ -1,4 +1,10 @@
-# reactjs-countries-test
+# reactjs-countries-test 
+
+# How to setup
+    -First run "npm install"
+    -Then run "npm start"
+
+    ---If it does NOT run npm start please follow the steps to install list of libraries below---
  
 # Install Axios - npm install axios
 
